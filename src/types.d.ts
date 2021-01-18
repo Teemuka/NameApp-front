@@ -16,5 +16,11 @@ type Theme = {
     colorTheme :ColorTheme
 }
 
+type Name = {
+    id :number,
+    name :string,
+    amount :number
+}
+
 
 
