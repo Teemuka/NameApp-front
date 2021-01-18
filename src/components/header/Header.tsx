@@ -7,16 +7,25 @@ const useStyles = createUseStyles((theme :Theme) => ({
         position: 'fixed', 
         zIndex: 1, 
         width: '100%',
-        backgroundColor : theme.colorTheme.color9
+        backgroundColor : theme.colorTheme.color8,
+        lineHeight : '10vh',
+        height : '10vh'
+        
     },
     menu : {
-        backgroundColor : [[theme.colorTheme.color9], '!important'],
+        backgroundColor : [[theme.colorTheme.color8], '!important'],
         '& li.ant-menu-item-selected' : {
             backgroundColor : [[theme.colorTheme.color6], '!important'],
         },
         '& li:hover' : {
             backgroundColor : [[theme.colorTheme.color7], '!important'],
-        }
+        },
+        '& li' : {
+            width : '8vw',
+            textAlign : 'center',
+            borderBottom : [['1px solid transparent'], '!important'],
+        },
+        height : '10vh'
     },
 }))
 

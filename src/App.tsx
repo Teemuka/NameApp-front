@@ -1,23 +1,19 @@
 import React from 'react';
 import './App.css' 
+import { Layout } from 'antd'
+import Header from 'components/header/Header'
+import { ThemeProvider } from 'react-jss'
+import Themes from './ColorThemes'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <>
+    <ThemeProvider theme={Themes[0]}>
+      <Layout>
+          <Header />
+      </Layout>
+    </ThemeProvider>
+  </>
   );
 }
 
