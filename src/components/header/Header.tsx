@@ -1,6 +1,7 @@
 import React from 'react'
 import { Layout, Menu } from 'antd'
 import { createUseStyles, useTheme } from 'react-jss'
+import { Link } from 'react-router-dom'
 
 const useStyles = createUseStyles((theme :Theme) => ({
     header: {
@@ -39,9 +40,9 @@ function Header() {
         <Layout.Header className={classes.header}>
             <div className="logo" />
             <Menu theme="dark" className={classes.menu} mode="horizontal" defaultSelectedKeys={['1']}>
-                <Menu.Item key="1">nav 1</Menu.Item>
-                <Menu.Item key="2">nav 2</Menu.Item>
-                <Menu.Item key="3">nav 3</Menu.Item>
+                <Menu.Item key="1"><Link to="/names">Names</Link></Menu.Item>
+                <Menu.Item key="2"><Link to="/something1">Something 1</Link></Menu.Item>
+                <Menu.Item key="3"><Link to="/something2">Something 2</Link></Menu.Item>
             </Menu>
         </Layout.Header>
         </>
