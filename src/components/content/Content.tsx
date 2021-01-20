@@ -9,13 +9,13 @@ const useStyles = createUseStyles((theme :Theme) => ({
     layout: {
         padding: '0 50px', 
         marginTop: '10vh',
-        height: '90vh',
+        minHeight: '90vh',
         backgroundColor: theme.colorTheme.color1
     },
     layoutBackground : {
         padding: 24, 
-        height: '100%',
-        backgroundColor: theme.colorTheme.color2
+        minHeight: '90vh',
+        backgroundColor: theme.colorTheme.color2,
     },
 }))
 
