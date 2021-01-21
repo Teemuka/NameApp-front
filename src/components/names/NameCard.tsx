@@ -6,6 +6,7 @@ type Props = {
     name :string,
     id :number,
     amount :number
+    route :(id :string) => void
 }
 
 const useStyles = createUseStyles((theme :Theme) => ({
@@ -64,14 +65,14 @@ const useStyles = createUseStyles((theme :Theme) => ({
     }
 }))
 
-function NameCard({name, id, amount} :Props) {
+function NameCard({name, id, amount, route} :Props) {
 
     const theme = useTheme()
     const classes = useStyles({theme})
     
     return (
         <>
-            <div className={classes.container}>
+            <div className={classes.container} onClick={() => {route(id.toString())}}>
                 <div className={classes.column}>
                     <img className={classes.image} alt="" src={person} />
                 </div>

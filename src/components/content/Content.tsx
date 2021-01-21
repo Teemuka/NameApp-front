@@ -31,14 +31,14 @@ function Content() {
         axios.get('/names').then(response => {
             setNames(response.data)
         })
-    })
+    }, [])
 
     return (
         <>
             <Layout.Content className={styles.layout}>
                 <div className={styles.layoutBackground}>
                     <Switch>
-                        <Route path="/names">
+                        <Route path="/names/:id?">
                             <NamesContainer {...{names}}></NamesContainer>
                         </Route>
                     </Switch>               

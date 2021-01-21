@@ -15,7 +15,6 @@ function App() {
         <BrowserRouter>
           <Header />
           <Content />
-          <Redirect to="/names" />
         </BrowserRouter>
       </Layout>
     </ThemeProvider>
