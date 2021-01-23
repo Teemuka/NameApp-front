@@ -39,7 +39,7 @@ function Header() {
         <>
         <Layout.Header className={classes.header}>
             <div className="logo" />
-            <Menu theme="dark" className={classes.menu} mode="horizontal" defaultSelectedKeys={['1']}>
+            <Menu theme="dark" className={classes.menu} mode="horizontal">
                 <Menu.Item key="1"><Link to="/names">Names</Link></Menu.Item>
                 <Menu.Item key="2"><Link to="/something1">Something 1</Link></Menu.Item>
                 <Menu.Item key="3"><Link to="/something2">Something 2</Link></Menu.Item>

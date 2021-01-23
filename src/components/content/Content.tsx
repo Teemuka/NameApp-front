@@ -28,7 +28,7 @@ function Content() {
     const [names, setNames] = useState<Name[]>([])
 
     useEffect(() => {
-        axios.get('/names').then(response => {
+        axios.get('/api/names').then(response => {
             setNames(response.data)
         })
     }, [])
