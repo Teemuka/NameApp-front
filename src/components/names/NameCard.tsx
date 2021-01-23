@@ -10,6 +10,11 @@ type Props = {
 }
 
 const useStyles = createUseStyles((theme :Theme) => ({
+    
+    '@keyframes showAnim': {
+        from: {opacity: 0},
+        to: {opacity: 1}
+    },
     container: {
         width: '25vw',
         backgroundColor : theme.colorTheme.color3,
@@ -22,7 +27,9 @@ const useStyles = createUseStyles((theme :Theme) => ({
         top : '0',
         boxShadow: `3px 3px ${theme.colorTheme.color8}`,
         transition: 'box-shadow 0.3s, top 0.5s',
-
+        animationName: '$showAnim',
+        animationDuration: '2s',
+        
         '&:hover': {
             top: '-5px',
             boxShadow: `7px 7px ${theme.colorTheme.color8}`
@@ -89,10 +96,6 @@ function NameCard({name, id, amount, route} :Props) {
             
         </>
     )
-    
-
-
-
 }
 
 export default NameCard

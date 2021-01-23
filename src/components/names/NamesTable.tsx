@@ -8,8 +8,15 @@ type Props = {
 }
 
 const useStyles = createUseStyles((theme :Theme) => ({
+    
+    '@keyframes showAnim': {
+        from: {opacity: 0},
+        to: {opacity: 1}
+    },
     table: {
         width: '100%',
+        animationName: '$showAnim',
+        animationDuration: '2s',
         '& thead th' : {
             backgroundColor : [[theme.colorTheme.color6], '!important'],
             color: theme.colorTheme.color10,
@@ -63,7 +70,6 @@ const columns : ColumnsType<Name> = [
         sorter: (a, b) => a.amount > b.amount ? 1 : -1
     },
   ];
-
 
 function NamesTable({names, route} :Props) {
 
