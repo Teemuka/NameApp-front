@@ -1,5 +1,7 @@
 # NameApp front-end
 
+Front-end for Name Application. Add to 'client' directory in Names App project. 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
